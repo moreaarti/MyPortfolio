@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from 'react';
-import Image from 'next/image';
-import TabButton from './TabButton';
+import React, { useState } from "react";
+import Image from "next/image";
+import TabButton from "./TabButton";
 
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");
@@ -35,6 +35,7 @@ const AboutSection = () => {
       id: "certifications",
       content: (
         <ul>
+          <li>MERN Stack Certification (Seven Mentor Pvt Ltd)</li>
           <li>React.js Certification</li>
           <li>JavaScript Mastery</li>
         </ul>
@@ -57,45 +58,68 @@ const AboutSection = () => {
   };
 
   return (
-    <section className='text-white'>
-      <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16'>
-        <Image src="/img/about-image.png" width={500} height={500} alt="About Image" />
+    <section className="text-white">
+      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16">
+        <Image
+          src="/img/about-image.png"
+          width={500}
+          height={500}
+          alt="About Image"
+        />
         <div>
-          <h2 className='text-4xl font-bold text-white mb-4 sm:mt-4'>
+          <h2 className="text-4xl font-bold text-white mb-4 sm:mt-4">
             About Me
           </h2>
-          <p className='text-base lg:text-lg'>
-            I am a Web and mobile developer with a passion for creating interactive and responsive web applications. I have experience working with JavaScript, React-Redux, Node.js, Express.js, React Native, Next.js, SQL, HTML, CSS, and other libraries. I am a quick learner and always looking to expand my knowledge and skill set. I am a team player and excited to work with others to create amazing applications.
+          <p className="text-base lg:text-lg">
+            I am a Web and mobile developer with a passion for creating
+            interactive and responsive web applications. I have experience
+            working with JavaScript, React-Redux, Node.js, Express.js, React
+            Native, Next.js, SQL, HTML, CSS, and other libraries. I am a quick
+            learner and always looking to expand my knowledge and skill set. I
+            am a team player and excited to work with others to create amazing
+            applications.
           </p>
-          <div className='flex flex-row mt-8'>
+          <div className="flex flex-row mt-8">
             {/* Applying the CSS styles to each tab */}
-            <button 
-              onClick={() => handleTabChange("skills")} 
-              className={`mr-3 font-semibold hover:text-white text-[#ADB7BE] border-b border-purple-500 ${tab === "skills" ? "text-white border-purple-600" : ""}`}>
+            <button
+              onClick={() => handleTabChange("skills")}
+              className={`mr-3 font-semibold hover:text-white text-[#ADB7BE] border-b border-purple-500 ${
+                tab === "skills" ? "text-white border-purple-600" : ""
+              }`}
+            >
               Skills
             </button>
 
-            <button 
-              onClick={() => handleTabChange("education")} 
-              className={`mr-3 font-semibold hover:text-white text-[#ADB7BE] border-b border-purple-500 ${tab === "education" ? "text-white border-purple-600" : ""}`}>
+            <button
+              onClick={() => handleTabChange("education")}
+              className={`mr-3 font-semibold hover:text-white text-[#ADB7BE] border-b border-purple-500 ${
+                tab === "education" ? "text-white border-purple-600" : ""
+              }`}
+            >
               Education
             </button>
 
-            <button 
-              onClick={() => handleTabChange("certifications")} 
-              className={`mr-3 font-semibold hover:text-white text-[#ADB7BE] border-b border-purple-500 ${tab === "certifications" ? "text-white border-purple-600" : ""}`}>
+            <button
+              onClick={() => handleTabChange("certifications")}
+              className={`mr-3 font-semibold hover:text-white text-[#ADB7BE] border-b border-purple-500 ${
+                tab === "certifications" ? "text-white border-purple-600" : ""
+              }`}
+            >
               Certifications
             </button>
 
-            <button 
-              onClick={() => handleTabChange("experience")} 
-              className={`mr-3 font-semibold hover:text-white text-[#ADB7BE] border-b border-purple-500 ${tab === "experience" ? "text-white border-purple-600" : ""}`}>
+            <button
+              onClick={() => handleTabChange("experience")}
+              className={`mr-3 font-semibold hover:text-white text-[#ADB7BE] border-b border-purple-500 ${
+                tab === "experience" ? "text-white border-purple-600" : ""
+              }`}
+            >
               Experience
             </button>
           </div>
 
           {/* Display the selected tab content */}
-          <div className='mt-8'>
+          <div className="mt-8">
             {TAB_DATA.find((t) => t.id === tab)?.content}
           </div>
         </div>
@@ -105,8 +129,6 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
-
-
 
 // "use client"
 // import React, { useState, useTransition } from 'react'
@@ -140,7 +162,6 @@ export default AboutSection;
 
 //             </ul>
 //         )
-
 
 //     },
 //     {
@@ -195,9 +216,6 @@ export default AboutSection;
 // }
 
 // export default AboutSection
-
-
-
 
 // "use client";
 // import React, { useState } from 'react';
